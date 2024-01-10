@@ -9,4 +9,10 @@ public class NetworkManager {
     HashMap<String,Peer> peers;
     Queue<Message> incomming;
     Queue<Message> outgoing;
+
+    public NetworkManager(){
+        peers = new HashMap<>();
+        incomming = new LinkedBlockingQueue<>();
+        outgoing = new LinkedBlockingQueue<>();
+    }
 }

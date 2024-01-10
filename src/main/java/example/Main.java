@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(1233);
-            serverSocket.accept();
+            Peer peer = new Peer(serverSocket.accept());
+
         }catch (IOException e){
             throw  new RuntimeException(e);
         }
